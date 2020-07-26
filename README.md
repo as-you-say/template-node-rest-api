@@ -16,4 +16,7 @@ node server.js
 - POST - /signUp
 - GET - /home
 
-##
+# React
+npx create-react-app .
+
+
