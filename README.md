@@ -19,4 +19,7 @@ node server.js
 # React
 npx create-react-app .
 
+## src 폴더
+웹팩이 관리해주는 영역이기 때문에
+이미지나 소스들을 넣을 경우에는 꼭 src 폴더 안에 넣어주어야한다.
 
