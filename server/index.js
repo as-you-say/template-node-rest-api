@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 // 라우터
 app.get('/', (req, res) => res.send('안녕하세요~'));
-app.post('/apis/users/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
   // application/json 형태로 전달받는 경우에 body에 담겨서 받습니다
   const user = new User(req.body);
 
@@ -30,7 +30,7 @@ app.post('/apis/users/register', (req, res) => {
     })
   });
 });
-app.post('/apis/users/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
   // 1. 요청한 이메일이 데이터베이스에 있는지 찾는다.
   User.findOne({ emain: req.body.email }, (err, user) => {
     if (!user) {
@@ -58,7 +58,7 @@ app.post('/apis/users/login', (req, res) => {
     })
   })
 });
-app.get('/apis/users/auth', auth, (req, res) => {
+app.get('/api/users/auth', auth, (req, res) => {
   res.status(200).json({
     _id: req.user._id,
     isAdmin: req.user === 0 ? false : true,

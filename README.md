@@ -23,3 +23,5 @@ npx create-react-app .
 웹팩이 관리해주는 영역이기 때문에
 이미지나 소스들을 넣을 경우에는 꼭 src 폴더 안에 넣어주어야한다.
 
+## redux-promise redux-thunk
+리덕스를 보다 더 잘 쓸 수 있도록 도와주는 미들웨어
